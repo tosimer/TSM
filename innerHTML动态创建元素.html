@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box"></div>
+
+  <script src="js/common.js"></script>
+  <script>
+    console.time('tx');
+  tsm$(box);
+  var data = ['zs', 'ls', 'ww', 'zl'];
+  var arr = [];
+  arr.push('<ul>');
+  // box.innerHTML = '<ul>';
+  // forEach遍历数组，参数是一个函数；
+  // 这个函数有两个参数，第一个是数组中的元素，第二个是索引；
+    data.forEach(function (item, index) {
+      // box.innerHTML += '<li>' + item + '</li>'
+        arr.push( '<li>' + item + '</li>');
+    });
+
+  // box.innerHTML += '</ul>';
+  arr.push('</ul>');
+  box.innerHTML = arr.join('');
+  console.timeEnd('tx');
+  
+  </script>
+</body>
+</html>

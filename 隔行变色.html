@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="boss">
+    <li>东邪</li>
+    <li>西毒</li>
+    <li>南帝</li>
+    <li>北丐</li>
+    <li>中神通</li>
+    <script>
+      var lists = document.querySelectorAll('#boss li');
+      var i = 0; len =lists.length;
+      var mbg;
+      for (; i < len; i++) {
+        if (i % 2 === 0) {
+          lists[i].style.backgroundColor = "lightgray";
+        } else {
+          lists[i].style.backgroundColor = "gray";
+        }
+        lists[i].onmouseover = function () {
+          mbg = this.style.backgroundColor;
+          this.style.backgroundColor = '#fff';   
+        }
+        lists[i].onmouseout = function () {
+          this.style.backgroundColor = mbg;   
+        }
+
+      }
+    </script>
+  </ul>
+</body>
+</html>

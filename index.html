@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TSM--Do Best!</title>
+  <meta http-equiv="Content-Type" content="text/html;     charset=gb2312" />
+  <meta name="keywords" content="TSM|TOSIMER|tsm.com|">
+  <meta name="description" content="TSM--Do Best!" />
+  <meta name="author" content="TSM,tosimer">
+  <title>Document</title>
+</head>
+<body>
+  <img src="images/sprite.gif" alt="" id="img">
+  <script src="js/common.js"></script>
+  <script src="js/table.js"></script>
+  <script>
+    var img = document.getElementById('img');
+    document.onmousemove = function (e) {
+      e = e || window.event;
+      img.style.position =  'absolute';
+
+      
+      
+      img.style.left = getPage(e).pageX + 'px';
+      img.style.top = getPage(e).pageY + 'px';
+      
+    }
+
+  
+  </script>
+</body>
+</html>

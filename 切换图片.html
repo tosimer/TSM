@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+<body>
+
+  <div>
+
+      <input type="button" value="切换图片" id="btn"><br><br>
+      
+
+      <img id="img" src="images/01.png" alt="" width="960px" height="540px">
+
+
+      <script>
+        var btn = document.getElementById('btn');
+        var arr = ['images/01.png', 'images/02.png', 'images/03.png', 'images/04.png', 'images/05.png'];
+        var index = 0;
+        btn.onclick = function () {
+          var img = document.getElementById('img');
+          index++;
+          img.src = arr[index];
+          if (index === arr.length-1) { 
+            index = -1;
+          }
+        
+        }
+      
+      
+      </script>
+    
+
+    
+  
+  </div>
+
+</body>
+</html>

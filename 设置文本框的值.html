@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" value="">
+  <input type="text" value="">
+  <input type="text" value="">
+  <input type="text" value="">
+  <input type="text" value="">
+  <input type="text" value="">
+  <input type="text" value="">
+  <input type="button" value="提交" id="btn">
+
+  <script>
+    var inputs = document.getElementsByTagName('input');
+    var btns = document.getElementById('btn');
+    i = 0, len = inputs.length;
+    for (; i < len; i++) {
+      var input = inputs[i];
+      if (input.type !== 'text') {
+        
+        continue;
+      }
+      input.value = i + 1;
+    }
+
+    btn.onclick = function () {
+      // var str = "";
+      // for (i = 0; i < len; i++) {
+      //   var input = inputs[i];
+      //   if (input.type !== 'text') {
+
+      //     continue;
+      //   }
+      //   str += input.value + "|";
+        
+        
+      // } 
+      // str = str.substr(0,str.length-1);
+      // console.log(str);
+        var arr = [];
+        for (i = 0; i < len ;i++) {
+          var input = inputs[i];
+          if (input.type !== "text") {
+            continue;
+          }
+          arr.push(input.value);
+        }
+        var str = arr.join('|');
+        console.log(str);
+        
+    }
+    
+    
+  
+  </script>
+</body>
+</html>

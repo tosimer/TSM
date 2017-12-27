@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="button" value="关灯" id="onOff">
+  <script>
+    var onOff = document.getElementById('onOff');
+    var light = 1;
+    onOff.onclick = function () {
+      if (light === 1 ) {
+      document.body.style.backgroundColor = "black";
+      this.value = "开灯"
+      light = 0;
+      } else {
+      document.body.style.backgroundColor = "";
+      this.value = "关灯";
+      light = 1;
+      }
+    }
+  
+  </script>  
+</body>
+</html>

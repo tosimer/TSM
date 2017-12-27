@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  #box table {
+    border-collapse: collapse;
+  }
+  </style>
+</head>
+<body>
+  <div id="box"></div> 
+  <script src="js/common.js"></script>
+  <script src="js/table.js"></script>
+  <script>
+
+    var headData = ['姓名', '科目', '成绩', '操作'];
+    var bodyData = [
+      {name: 'zs', subject: '语文', score: 100},
+      {name: 'ls', subject: '数学', score: 100},
+      {name: 'ww', subject: '体育', score: 100},
+      {name: 'zl', subject: '英语', score: 100},
+      {name: 'tq', subject: '物理', score: 100}
+    ];
+
+    createTable(tsm$('box'), headData, bodyData);
+    
+  </script>
+  
+
+</body>
+</html>

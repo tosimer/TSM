@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    background-color:lightgray; 
+
+  }
+  #menu {
+    height: 50px;
+    width: 600px;
+    position: fixed;
+  }
+  
+  #menu ul li {
+    height: 50px;
+    width: 80px;
+    list-style-type: none;
+    float: left;
+  }
+  ul li {
+    margin-left: 5px;
+    
+    height: 50px;
+    line-height: 50px;
+    
+    display: block;
+    background-color: rgb(0, 41, 128);
+    text-align: center;
+    
+
+  }
+  ul li a {
+    text-decoration: none;
+    color: #fff;
+    font: normal normal 20px "微软雅黑" ；
+    
+  }
+  #menu ul li.current { 
+    background-color: skyblue;
+  }
+
+</style>
+<body>
+  <div id="menu">
+    <ul>
+      <li class="current"><a href="javascript:void(0)">首页</a></li>
+      <li><a href="javascript:void(0)">博客</a></li>
+      <li><a href="javascript:void(0)">播客</a></li>
+      <li><a href="javascript:void(0)">相册</a></li>
+      <li><a href="javascript:void(0)">帮助</a></li>
+      <li><a href="javascript:void(0)">关于</a></li>
+    </ul>
+  </div>
+  <script src="js/common.js"></script>
+<script>
+  // void 执行（）的语句总是返回undefined
+  // var x = void(0);
+  // console.log(x);
+  // var menu = document.getElementById('menu');
+ tsm$(menu);
+  // 自定义函数
+  var ul = getFirstElementChild(menu);
+  var list = ul.children;
+  var i = 0, len = list.length;
+  for (; i < len; i++) {
+    var link = getFirstElementChild(list[i]);
+    link.onclick = linkClick;
+  }
+
+  function linkClick() {
+
+    for (i = 0; i < len; i++) {
+      list[i].className = '';
+     }
+    this.parentNode.className = "current";
+    return false;
+  }
+
+
+
+</script>
+
+</body>
+</html>

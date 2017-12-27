@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <form action="1.php" method="post">
+
+  用户名：<input type="text" name="name" id="name" placeholder="请输入用户名"><br><br>
+
+  密　码：<input type="password" name="pwd" id="pwd" placeholder="请输入密码"><br><br>
+
+  <input type="submit" value="　登　录　" id="btnLogin">
+
+<script>
+  var btnLogin = document.getElementById('btnLogin');
+  btnLogin.onclick = function () {
+    var txtName = document.getElementById('name');
+    if (txtName.value.length < 3 || txtName.value.length > 6) {
+      txtName.className = "err";
+      return false;
+    } else {
+      txtName.className = "";
+    }
+    var txtPwd = document.getElementById('pwd');
+    if (txtPwd.value.length < 6 || txtPwd.value.length > 16) {
+      txtPwd.className = "err";
+      return false;
+    } else {
+      txtPwd.className = ""
+    }
+   
+  }
+
+
+</script>
+
+
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text"> <br>
+  <input type="text"> <br>
+  <input type="text"> <br>
+  <input type="text"> <br>
+  <input type="text"> <br>
+  <input type="text"> <br>
+  <input type="text"> <br>
+  <input type="text"> <br>
+  <input type="text"> <br>
+  <input type="button" value="按钮">
+  <script>
+    var texts = document.querySelectorAll('input[type=text]');
+    i = 0, len = texts.length;
+    for (; i < len; i++) {
+      var text  = texts[i];
+      text.onfocus = function () {
+        this.style.backgroundColor = 'lightgray';        
+      }
+      text.onblur = function () {
+        this.style.backgroundColor = '';        
+      }
+    }
+  
+  </script>
+</body>
+</html>
